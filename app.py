@@ -22,10 +22,10 @@ df["%"] = df["%"].str.replace("%", "").str.replace(",", ".", regex=False).astype
 # Create chart
 fig = go.Figure()
 
-fig.add_trace(go.Bar(x=df["Tahun"], y=df["Pagu"], name="Pagu", marker_color='lightskyblue'))
-fig.add_trace(go.Bar(x=df["Tahun"], y=df["Realisasi"], name="Realisasi", marker_color='mediumseagreen'))
+fig.add_trace(go.Bar(x=df["Tahun"], y=df["Pagu"], name="Pagu", marker_color='#00429d'))
+fig.add_trace(go.Bar(x=df["Tahun"], y=df["Realisasi"], name="Realisasi", marker_color='#73a2c6'))
 fig.add_trace(go.Scatter(x=df["Tahun"], y=df["%"], name="Persentase Realisasi",
-                         mode='lines+markers', yaxis='y2', line=dict(color='firebrick', width=3)))
+                         mode='lines+markers', yaxis='y2', line=dict(color='#f4777f', width=3)))
 
 fig.update_layout(
     title="📈 Pagu vs Realisasi + Persentase (2015–2024)",
