@@ -16,7 +16,8 @@ df["Pagu"] = df["Pagu"].str.replace(".", "", regex=False).astype(float)
 df["Realisasi"] = df["Realisasi"].str.replace(".", "", regex=False).astype(float)
 
 # Clean percentage column
-df["%"] = df["%"].str.replace("%", "").str.replace(",", ".", regex=False).astype(float)
+df["%"] = df["%"].str.replace("%", "").str.replace(",", ".", regex=False).astype(float) * 100
+
 
 # Create chart
 fig = go.Figure()
